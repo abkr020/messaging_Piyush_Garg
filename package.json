@@ -1,0 +1,23 @@
+{
+  "name": "messaging-piyush-garg",
+  "version": "1.0.0",
+  "description": "creating a messaging websitelike watsap message or a normal message",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "message",
+    "server",
+    "practice"
+  ],
+  "author": "abhishek",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chating web</title>
+</head>
+<body>
+    <h1>chating web</h1>
+    <input type="text" id="message" placeholder="type message">
+    <button id="sendbtn">send</button>
+    <div id="all_messages"></div>
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const sendbtn = document.getElementById("sendbtn")
+        const messageinput = document.getElementById("message")
+        const allmessages = document.getElementById("all_messages")
+
+        socket.on("message to all from client",message=>{
+            // console.log("from server to client me", message)
+            const p = document.createElement('p')
+            p.innerText = message;
+            allmessages.appendChild(p)
+        })
+        sendbtn.addEventListener("click",(e)=>{
+            const message = messageinput.value;
+            // console.log("clint message to client ",message)
+            socket.emit("user-message",message);
+        })
+
+
+    </script>
+</body>
+
+</html>
