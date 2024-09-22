@@ -1,7 +1,7 @@
 {
   "name": "messaging-piyush-garg",
   "version": "1.0.0",
-  "description": "creating a messaging websitelike watsap message or a normal message",
+  "description": "creating a messaging website like WhatsApp message or a normal message",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -20,5 +20,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
+  },
+  "engines": {
+    "node": "20.x"  
   }
 }
