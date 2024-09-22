@@ -29,6 +29,7 @@
         })
         sendbtn.addEventListener("click",(e)=>{
             const message = messageinput.value;
+            // sendbtn.innerText="ak";
             // console.log("clint message to client ",message)
             socket.emit("user-message",message);
         })
